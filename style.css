@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    background-color: #fefdf7;
+}
+
+.card {
+    width: 300px;
+    height: 400px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.title {
+    width: fit-content;
+    position: relative;
+    font-size: 15px;
+    top: 10px;
+    left: 10px;
+}
+
+.accordion {
+    margin-bottom: 20px;
+    position: relative;
+    top: 15px;
+    width: 90%;
+    position: relative;
+    left: 10px;
+}
+
+.accordion-item {
+    border-left: 5px solid #dcaf88;
+    border-bottom: 1px solid rgb(141, 141, 141);
+    background-color: #fff6ee;
+}
+
+.accordion-header {
+    padding: 10px;
+    font-weight: 300;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.accordion-content {
+    display: none;
+    padding: 10px;
+    font-size: 10px;
+    font-weight: 300;
+}
+
+.active {
+    background-color: #fcfbff;
+    border-left: 5px solid #aa9cd4;
+}
+
+.accordion-item.active .accordion-content {
+    display: block;
+}
+
+.accordion-item.active .accordion-header {
+    font-weight: 500;
+}
+
+.accordion-header::before {
+    content: "+";
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.accordion-item.active .accordion-header::before {
+    content: "-";
+}
